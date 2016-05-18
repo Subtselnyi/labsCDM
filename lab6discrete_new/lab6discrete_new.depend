@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1459160063 source:/home/subtselnyi/trst/lab6discrete_new/main.cpp
+	<iostream>
+	<fstream>
+	<algorithm>
+

@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1460974616 source:/home/subtselnyi/trst/lab9discrete/main.cpp
+	<fstream>
+	<iostream>
+	<iomanip>
+	"Jonson.h"
+
+1460971817 /home/subtselnyi/trst/lab9discrete/Jonson.h
+	<iostream>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1461418675 source:/home/subtselnyi/trst/lab10try/main.cpp
+	<stdio.h>
+	<vector>
+	<stack>
+

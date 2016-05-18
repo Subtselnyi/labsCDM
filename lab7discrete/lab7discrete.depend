@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1459763160 source:/home/subtselnyi/trst/lab7discrete/main.cpp
+	<iostream>
+	<fstream>
+	<algorithm>
+

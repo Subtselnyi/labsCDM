@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1460976671 source:/home/subtselnyi/trst/lab8discretemax/main.cpp
+	<iostream>
+	<fstream>
+	<iostream>
+	<deque>
+	<vector>
+	<iomanip>
+	<iostream>
+	<vector>
+

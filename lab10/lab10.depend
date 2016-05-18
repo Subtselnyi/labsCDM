@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1461577888 source:/home/subtselnyi/trst/lab10/main.cpp
+	<iostream>
+	<fstream>
+

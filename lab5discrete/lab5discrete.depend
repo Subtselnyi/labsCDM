@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1458557330 source:/home/subtselnyi/trst/lab5discrete/main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1463251370 source:/home/subtselnyi/trst/lab12Komiv/main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<iomanip>
+	<math.h>
+	<algorithm>
+

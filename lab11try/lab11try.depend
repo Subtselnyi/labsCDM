@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1461581426 source:/home/subtselnyi/trst/lab11try/main.cpp
+	<stdio.h>
+	<vector>
+	<algorithm>
+	<iostream>
+

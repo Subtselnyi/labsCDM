@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1463252934 source:/home/subtselnyi/trst/lab14/main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<iomanip>
+	<math.h>
+	<algorithm>
+

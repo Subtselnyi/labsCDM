@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1460976197 source:/home/subtselnyi/trst/lab8discrete/main.cpp
+	<iostream>
+	<fstream>
+

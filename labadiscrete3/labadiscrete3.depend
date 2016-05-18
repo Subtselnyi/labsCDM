@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1457778137 source:/home/subtselnyi/trst/labadiscrete3/main.cpp
+	<iostream>
+	<stdio.h>
+	<iomanip>
+	<vector>
+	<algorithm>
+

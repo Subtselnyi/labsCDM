@@ -1,0 +1,153 @@
+function Johnson(){
+
+var amount_elem = array_connect.length;
+var index = array_connect.length;
+//var array = array_connect;
+var array = [];
+for(var i = 0 ; i < index; i++){
+array[i] = [];
+}
+
+for(var i = 0 ; i < index; i++){
+array[i][0] = array_connect[i][0];
+array[i][1] = array_connect[i][1];
+array[i][2] = array_connect[i][2];
+array[i][3] = array_connect[i][3];
+}
+
+console.log("array");
+
+for(var i = 0; i < amount_vertex; i++){
+array[index++] = [];
+array[index - 1][0] = amount_vertex + 1;
+array[index - 1][1] = i + 1;
+array[index - 1][2] = 0;
+array[index - 1][3] = 1;
+}
+
+var distanse = [];
+var path = [];
+
+var V1 = amount_vertex;
+distanse[V1] = 0;
+for(var i = 0; i < amount_vertex + 1; i++){
+if(i != V1) distanse[i] = 1000;
+path[i] = 0;
+}
+
+var check_cycle = [];
+for(var o = 0; o < array.length + 1; o++){
+for(var j = 0; j < amount_vertex + 1; j++){
+for(var i = 0; i < array.length; i++){
+//console.log(i);
+//if(i < array_connect.length){
+if(array[i][0] == j + 1 ){
+if(distanse[j] + array[i][2] < distanse[array[i][1] - 1]){
+distanse[array[i][1] - 1] = distanse[j] + array[i][2];
+path[array[i][1] - 1] = j;
+}
+}
+//}
+}
+}
+if(o == array_connect.length - 1){
+for(var b = 0; b < amount_vertex + 1; b++){
+check_cycle[b] = distanse[b];
+}
+
+}
+if(o == array_connect.length){
+for(var b = 0; b < amount_vertex + 1; b++){
+if(check_cycle[b] != distanse[b]){
+message.innerHTML = "У графі наявний від'ємний цикл!";
+// return;
+
+}
+}
+}
+
+}
+
+
+for(var i = 0; i < array_connect.length; i++){
+array_connect[i][2] = array[i][2] + distanse[i] - distanse[i + 1];
+}
+
+
+var matrix = [];
+
+for(var i = 0; i < amount_vertex; i++){
+matrix[i] = dijkstra(i + 1);
+}
+
+for(var i = 0; i < amount_vertex; i++){
+for(var j = 0; j < amount_vertex; j++){
+matrix[i][j] = matrix[i][j] - distanse[i] + distanse[j];
+if(matrix[i][j] > 900){
+matrix[i][j] = "INF";
+}
+}
+}
+console.log(matrix);
+
+var result = '';
+for(var i = 0; i < amount_elem; i++){
+result += matrix[i].join(" ") + "<br/>";
+}
+
+result_field.innerHTML = result;
+
+
+function dijkstra(start){
+e1 = start;
+
+var distance_d = [];
+order = [];
+finded = [];
+var i = 0;
+while(i < amount_vertex){
+distance_d[i] = 1000;
+order[i] = i + 1;
+if(i + 1 == start){
+distance_d[i] = 0;
+order[i] = 0;
+finded[i] = 1;
+}
+i++;
+}
+
+var k = 0;
+
+while(k < amount_vertex){
+
+for(var i = 0; i < array_connect.length; i++){
+if(array_connect[i][0] == start && finded[array_connect[i][1] - 1] == undefined){
+if(distance_d[array_connect[i][0] - 1] + array_connect[i][2] < distance_d[array_connect[i][1] - 1]){
+distance_d[array_connect[i][1] - 1] = distance_d[array_connect[i][0] - 1] + array_connect[i][2];
+order[array_connect[i][1] - 1] = array_connect[i][0];
+}
+}
+}
+
+
+var min = 1000, index_min = 0;
+for(var i = 0; i < amount_vertex; i++){
+if(!finded[i] && distance_d[i] != 1000){
+if(distance_d[i] < min) {
+min = distance_d[i];
+index_min = i;
+}
+}
+}
+
+start = index_min + 1;
+finded[index_min] = 1;
+k++;
+
+}
+return distance_d;
+}
+
+}
+12:10:53
+

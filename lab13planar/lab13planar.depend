@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1463247011 source:/home/subtselnyi/trst/lab13planar/main.cpp
+	<stdio.h>
+	<iostream>
+
